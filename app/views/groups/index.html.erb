@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
       <th>Icon</th>
+      <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,9 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= group.name %></td>
         <td><%= group.icon %></td>
+        <td><%= group.name %></td>
+        <td><%= group.created_at.strftime("%d %B %Y") %></td>
         <td><%= link_to 'Show', group %></td>
         <% if group.user == current_user %>
           <td><%= link_to 'Edit', edit_group_path(group) %></td>
