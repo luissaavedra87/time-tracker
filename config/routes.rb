@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   resources :groups
   
   get '/home', to: 'pages#home'
+  get '/main', to: 'pages#main' 
 
   authenticated :user do
-    root to: 'groups#index', as: :authenticated_root
+    root to: 'pages#main', as: :authenticated_root
   end
 
   unauthenticated :user do

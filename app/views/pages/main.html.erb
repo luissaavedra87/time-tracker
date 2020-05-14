@@ -1,0 +1,12 @@
+<h1><%= current_user.email%></h1>
+
+<div>
+  <ul>
+    <li><%= link_to 'Transactions', '#' %></li>
+    <li><%= link_to 'Non Categorised Transaction', '#' %></li>
+    <li><%= link_to 'Categories', '#' %></li>
+    <li><%= link_to 'Members', '#' %></li>
+  </ul>
+</div>
+
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
