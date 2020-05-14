@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   
   get '/home', to: 'pages#home'
 
-
   authenticated :user do
     root to: 'groups#index', as: :authenticated_root
   end
