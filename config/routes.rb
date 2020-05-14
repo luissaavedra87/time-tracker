@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :clocks
   devise_for :users
-  resources :groups
+  resources :groups do
+    resources :clocks
+  end
   
   get '/home', to: 'pages#home'
   get '/main', to: 'pages#main' 
