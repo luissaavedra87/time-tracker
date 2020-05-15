@@ -63,7 +63,7 @@ class ClocksController < ApplicationController
   end
 
   def ehour
-    @ext_hour = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: params[:group_id])
+    @ext_hour = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: params[nil])
   end
 
   private

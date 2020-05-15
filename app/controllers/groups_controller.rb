@@ -11,6 +11,8 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.json
   def show
+    @group = Group.find(params[:id])
+    @clocks = @group.clocks.order_by_most_recent
   end
 
   # GET /groups/new

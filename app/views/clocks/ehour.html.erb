@@ -1,9 +1,14 @@
 <h1>External Hours</h1>
 
-<% @ext_ehour.each do |clock| %>
+<% @ext_hour.each do |clock| %>
     <%= clock.group_id %>
-    <%= clock.name %>
-    <%= clock.user.name%>
+    Name: <%= clock.name %><br>
+    Created by :<%= clock.user.name%><br>
     <%= clock.created_at.strftime("%d %B %Y") %>
-    <%= clock.hour %>
+    Hours: <%= clock.hour %><br><br>
 <% end %>
+
+<br><br>
+
+<%= link_to 'Edit', '/clocks/#{clocks.id}/edit' %> |
+<%= link_to 'Back', main_path %>

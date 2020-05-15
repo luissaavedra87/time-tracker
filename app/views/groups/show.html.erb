@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<% @clocks.each do |clock|%>
+  Group Icon: <%= @group.icon %><br>
+  Task name: <%= clock.name %><br>
+  Group name: <%= @group.name %><br>
+  Created at: <%= clock.created_at.strftime('%d %B %Y')%><br>
+  Hours: <%= clock.hour %>
+  <br><br>
+<% end %>
 <p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
 
-<p>
-  <strong>Icon:</strong>
-  <%= @group.icon %>
-</p>
 
 <% if @group.user == current_user %>
   <%= link_to 'Edit', edit_group_path(@group) %> |
