@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :groups
   has_many :clocks
+  has_one_attached :avatar
 end

@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= current_user.email%></h1>
+
 
 <div>
   <ul>
+      <% if current_user.avatar.attached? %>
+        <%= image_tag(current_user.avatar, :size => "120x150") %>
+      <% end %>
+    <h3><%= current_user.name%></h3>
     <li><%= link_to 'Account Setting', edit_user_registration_path %></li>
     <li><%= link_to 'My Hours', clocks_path %></li>
     <li><%= link_to 'Non Categorised Hours', ehour_path %></li>
