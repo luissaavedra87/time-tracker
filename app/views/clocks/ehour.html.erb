@@ -1,0 +1,9 @@
+<h1>External Hours</h1>
+
+<% @ext_ehour.each do |clock| %>
+    <%= clock.group_id %>
+    <%= clock.name %>
+    <%= clock.user.name%>
+    <%= clock.created_at.strftime("%d %B %Y") %>
+    <%= clock.hour %>
+<% end %>

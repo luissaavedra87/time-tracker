@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   end
   
   get '/home', to: 'pages#home'
-  get '/main', to: 'pages#main' 
+  get '/main', to: 'pages#main'
+  get '/ehour', to: 'clocks#ehour'
 
   authenticated :user do
     root to: 'pages#main', as: :authenticated_root
