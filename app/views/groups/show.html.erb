@@ -4,7 +4,8 @@
   Group Icon: <%= @group.icon %><br>
   Task name: <%= clock.name %><br>
   Group name: <%= @group.name %><br>
-  Created at: <%= clock.created_at.strftime('%d %B %Y')%><br>
+  Created by: <%= clock.user.name%><br>
+  <%= clock.created_at.strftime('%d %B %Y')%><br>
   Hours: <%= clock.hour %>
   <br><br>
 <% end %>

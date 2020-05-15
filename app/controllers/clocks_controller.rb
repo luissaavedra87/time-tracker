@@ -4,7 +4,8 @@ class ClocksController < ApplicationController
   # GET /clocks
   # GET /clocks.json
   def index
-    @clocks = Clock.all.order_by_most_recent.where(user_id: current_user)
+    ids = Group.ids
+    @clocks = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: ids)
   end
 
   # GET /clocks/1
