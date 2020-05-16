@@ -16,3 +16,26 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+  height: 100vh;
+  min-width: 375px;
+}
+
+body {
+  height: 100vh;
+}
+
+.main-container {
+  height: 100%;
+  background-color: #f1f3f2;
+}
+
+.title {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Alegreya', serif;
+  font-size: 38px;
+}

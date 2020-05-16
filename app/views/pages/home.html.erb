@@ -1,4 +1,9 @@
-<h1>TIME TRACKER</h1>
-
-<li><%= link_to 'Log In', new_user_session_path %></li>
-<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+<div class="container main-container">
+  <div class="col-sm-12 text-center">
+    <div class="title">
+      TIME TRACKER
+    </div>
+    <%= button_to 'Log In', new_user_session_path, class: "btn" %>
+    <%= link_to 'Sign Up', new_user_registration_path, class: "btn" %>
+  <div>
+<div>
