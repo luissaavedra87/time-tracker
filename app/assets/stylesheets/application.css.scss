@@ -17,6 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100vh;
   min-width: 375px;
@@ -32,10 +38,25 @@ body {
 }
 
 .title {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Alegreya', serif;
   font-size: 38px;
+}
+
+.button {
+  width: 90%;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.signup-btn {
+  color: grey;
 }

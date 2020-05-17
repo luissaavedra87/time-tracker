@@ -14,7 +14,7 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= group.icon %></td>
+        <td><%= image_tag(group.icon, :size => "120x120") %></td>
         <td><%= group.name %></td>
         <td><%= group.created_at.strftime("%d %B %Y") %></td>
         <td><%= link_to 'Show', group %></td>
@@ -28,5 +28,5 @@
 
 <br>
 
-<%= link_to 'New Group', new_group_path %><br>
+<%= link_to 'Add Group', new_group_path %><br>
 <%= link_to 'Back', main_path %>

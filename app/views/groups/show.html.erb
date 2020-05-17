@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% @clocks.each do |clock|%>
-  Group Icon: <%= @group.icon %><br>
+  <%= image_tag(@group.icon, :size => "120x120") %><br>
   Task name: <%= clock.name %><br>
   Group name: <%= @group.name %><br>
   Created by: <%= clock.user.name%><br>
@@ -13,6 +13,6 @@
 
 
 <% if @group.user == current_user %>
-  <%= link_to 'Edit', edit_group_path(@group) %> |
+  <%= link_to 'Edit group', edit_group_path(@group) %> |
 <% end %>
 <%= link_to 'Back', groups_path %>

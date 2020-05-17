@@ -16,7 +16,7 @@
   <tbody>
     <% @clocks.each do |clock| %>
       <tr>
-        <td><%= clock.group_id %></td>
+        <td><%= image_tag(clock.group.icon, :size => "100x100") %></td>
         <td><%= clock.name %></td>
         <td><%= clock.created_at.strftime("%d %B %Y") %></td>
         <td><%= clock.hour %></td>
