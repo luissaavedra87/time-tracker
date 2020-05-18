@@ -1,4 +1,6 @@
 class Clock < ApplicationRecord
+  validates :name, :hour, presence: true
+
   belongs_to :user
   belongs_to :group, optional: true
 

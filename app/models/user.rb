@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
+
   has_many :groups
   has_many :clocks
   has_one_attached :avatar
