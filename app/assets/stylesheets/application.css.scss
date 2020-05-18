@@ -47,9 +47,10 @@ body {
 }
 
 .button {
-  width: 90%;
-  padding: 15px 0;
+  width: 100%;
+  padding: 12px 0;
   font-weight: bold;
+  font-size: 17px;
 }
 
 .login-btn {
@@ -59,4 +60,17 @@ body {
 
 .signup-btn {
   color: grey;
+}
+
+.container {
+  width: 100%;
+}
+
+.input {
+  background: none;
+}
+
+.alert {
+  padding: 5px;
+  margin-bottom: 0;
 }
