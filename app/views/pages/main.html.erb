@@ -1,16 +1,41 @@
-<div>
-  <ul>
-    <div class="rounded-circle">
+<div class="container main-container text-center">
+  <div class="row container">
+    <div class="col-12 mt-5">
     <% if current_user.avatar.attached? %>
-      <%= image_tag(current_user.avatar, :size => "120x150") %>
+      <%= image_tag(current_user.avatar, :size => "120x120", class: "rounded-circle") %>
+    <% else %>
+      <%= image_tag("default-user.jpg", :size => "120x120", class: "rounded-circle") %>
     <% end %>
     </div>
-    <h3><%= current_user.name%></h3>
-    <li><%= link_to 'Account Setting', edit_user_registration_path %></li>
-    <li><%= link_to 'My Hours', clocks_path %></li>
-    <li><%= link_to 'Non Categorised Hours', ehour_path %></li>
-    <li><%= link_to 'Groups', groups_path %></li>
-  </ul>
+
+    <h3 class="col-12"><%= current_user.name%></h3>
+
+    <div class="col-2 d-flex justify-content-center p-0 my-2">
+      <span class="border-icon"><i class="fas fa-cog fa-2x pt-2"></i></span>
+    </div>
+    <div class="col-10 d-flex justify-content-start align-self-center py-3 border-bottom label-size">
+      <%= link_to 'Account Setting', edit_user_registration_path, class:"text-white" %><br>
+    </div>
+    <div class="col-2 d-flex justify-content-center p-0 my-2">
+     <span class="border-icon"><i class="fas fa-hourglass-start fa-2x pt-2"></i></span>
+    </div>
+    <div class="col-10 d-flex justify-content-start align-self-center py-3 border-bottom label-size">
+      <%= link_to 'My Hours', clocks_path, class:"text-white" %></li><br>
+    </div>
+    <div class="col-2 d-flex justify-content-center p-0 my-2">
+      <span class="border-icon"><i class="fas fa-ban fa-2x pt-2"></i></span>
+    </div>
+    <div class="col-10 d-flex justify-content-start align-self-center py-3 border-bottom label-size">
+      <%= link_to 'Non Categorised Hours', ehour_path, class:"text-white" %><br>
+    </div>
+    <div class="col-2 d-flex justify-content-center p-0 my-2">
+      <span class="border-icon"><i class="far fa-object-group fa-2x pt-2"></i></span>
+    </div>
+    <div class="col-10 d-flex justify-content-start align-self-center py-3 border-bottom label-size">
+      <%= link_to 'Groups', groups_path, class:"text-white" %><br>
+    </div>
+
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"text-white", class:"btn button btn-danger mx-3 my-5"%>
+  </div>
 </div>
 
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
