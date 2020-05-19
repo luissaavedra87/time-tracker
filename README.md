@@ -40,7 +40,7 @@
 
 ## Live Demo
 
-[Heroku Demo Link]()
+[Heroku Demo Link](https://powerful-plateau-48172.herokuapp.com/)
 
 ## Getting Started
 
