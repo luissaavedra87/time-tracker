@@ -1,1 +1,1 @@
-json.partial! "clocks/clock", clock: @clock
+json.partial! 'clocks/clock', clock: @clock

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Creating a user', type: :feature do
   before(:each) do
-    @user1 = User.new(name: 'test', email: 'test@gmail.com', password: '123456', password_confirmation: '123456' )
+    @user1 = User.new(name: 'test', email: 'test@gmail.com', password: '123456', password_confirmation: '123456')
     @user1.avatar = fixture_file_upload('default-user.jpg')
     @user1.save
   end

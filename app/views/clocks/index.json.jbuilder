@@ -1,1 +1,1 @@
-json.array! @clocks, partial: "clocks/clock", as: :clock
+json.array! @clocks, partial: 'clocks/clock', as: :clock

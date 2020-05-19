@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'clock/trasaction views', type: :feature do
   before(:each) do
-    @user1 = User.new(name: 'test', email: 'test@gmail.com', password: '123456', password_confirmation: '123456' )
+    @user1 = User.new(name: 'test', email: 'test@gmail.com', password: '123456', password_confirmation: '123456')
     @user1.avatar = fixture_file_upload('default-user.jpg')
     @user1.save
     @group = Group.new(name: 'test group', user_id: 1)
@@ -29,5 +29,4 @@ RSpec.describe 'clock/trasaction views', type: :feature do
     expect(page).to have_content('Projects')
     expect(Group.all.count).to eq(count + 1)
   end
-
 end

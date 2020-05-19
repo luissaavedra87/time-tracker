@@ -1,5 +1,5 @@
 class ClocksController < ApplicationController
-  before_action :set_clock, only: [:show, :edit, :update, :destroy]
+  before_action :set_clock, only: %i[show edit update destroy]
 
   # GET /clocks
   # GET /clocks.json
@@ -11,8 +11,7 @@ class ClocksController < ApplicationController
 
   # GET /clocks/1
   # GET /clocks/1.json
-  def show
-  end
+  def show; end
 
   # GET /clocks/new
   def new
@@ -20,8 +19,7 @@ class ClocksController < ApplicationController
   end
 
   # GET /clocks/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /clocks
   # POST /clocks.json
@@ -70,13 +68,14 @@ class ClocksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_clock
-      @clock = Clock.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def clock_params
-      params.require(:clock).permit(:group_id, :name, :hour)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_clock
+    @clock = Clock.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def clock_params
+    params.require(:clock).permit(:group_id, :name, :hour)
+  end
 end
