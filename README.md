@@ -66,7 +66,6 @@ Setup database with:
    rails db:migrate
 ```
 
-
 ### Usage
 
 Start server with:
