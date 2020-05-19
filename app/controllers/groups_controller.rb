@@ -13,6 +13,8 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @clocks = @group.clocks.order_by_most_recent
+
+    @group_clocks_sum = @clocks.sum(:hour)
   end
 
   # GET /groups/new

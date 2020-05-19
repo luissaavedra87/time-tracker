@@ -1,5 +1,5 @@
 <div class="container main-container text-center">
-  <div class="row container">
+  <div class="row mx-0 container">
     <div class="col-12 mt-5">
     <% if current_user.avatar.attached? %>
       <%= image_tag(current_user.avatar, :size => "120x120", class: "rounded-circle") %>
@@ -32,10 +32,10 @@
       <span class="border-icon"><i class="far fa-object-group fa-2x pt-2"></i></span>
     </div>
     <div class="col-10 d-flex justify-content-start align-self-center py-3 border-bottom label-size">
-      <%= link_to 'Groups', groups_path, class:"text-white" %><br>
+      <%= link_to 'Projects', groups_path, class:"text-white" %><br>
     </div>
 
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"text-white", class:"btn button btn-danger mx-3 my-5"%>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"text-white", class:"btn button btn-danger my-5"%>
   </div>
 </div>
 

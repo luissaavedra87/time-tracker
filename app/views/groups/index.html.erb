@@ -1,30 +1,42 @@
-<h1>Groups</h1>
+<div class="container head-ix-container px-0 text-center fixed-top">
+  <div class="h-70 align-items-center justify-content-around d-flex text-white pt-1">
+    <%= link_to 'Back', main_path, class: "text-white" %>
+    <h2>Projects</h2>
+    <i class="fas fa-search fa-lg"></i>
+  </div>
+  <div class="row align-items-end d-flex pt-2">
+    <div class="col-4 h-100"></div>
+    <div class="col-4 h-100 text-white">Most Recent</div>  
+    <div class="col-4 h-100 text-info">Most Anciente</div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Icon</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container content-ix-container">
+  <div class="container d-flex flex-column justify-content-around py-1 ">
     <% @groups.each do |group| %>
-      <tr>
-        <td><%= image_tag(group.icon, :size => "120x120") %></td>
-        <td><%= group.name %></td>
-        <td><%= group.created_at.strftime("%d %B %Y") %></td>
-        <td><%= link_to 'Show', group %></td>
-        <% if group.user == current_user %>
-          <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
+      <div class="row d-flex flex-row my-1 p-2 bg-white card-border">
+        <div class="col-4 p-0">
+          <%= image_tag(group.icon, :size => "120x120") %>
+        </div>
+        <div class="col-7">
+          <%= group.name %><br>
+          <div class="label-size-14">
+            <%= group.created_at.strftime("%d %B %Y") %><br>
+          </div>
+          <div class="label-size-14">
+            <%= link_to 'Show', group %>
+            <% if group.user == current_user %>
+              <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'Add Group', new_group_path %><br>
-<%= link_to 'Back', main_path %>
+<div class="fixed-bottom">
+  <div class="p-3 btn-success">
+   <%= link_to 'Add Group', new_group_path, class: "btn button btn-success border border-white"%><br>
+  </div>
+</div>

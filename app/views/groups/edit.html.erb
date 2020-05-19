@@ -1,6 +1,9 @@
-<h1>Editing Group</h1>
+<div class="container head-container px-0 text-center fixed-top">
+  <div class="h-100 align-items-center justify-content-around d-flex text-white">
+    <%= link_to "Back", groups_path, class:"text-white"%>
+    <h2>Edit Group</h2>
+    <i class="fas fa-search fa-lg"></i>
+  </div>
+</div>
 
 <%= render 'form', group: @group %>
-
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>

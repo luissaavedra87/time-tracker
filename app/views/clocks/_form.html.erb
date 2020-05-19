@@ -1,32 +1,34 @@
-<%= form_with(model: clock, local: true) do |form| %>
-  <% if clock.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(clock.errors.count, "error") %> prohibited this clock from being saved:</h2>
+<div class="container content-container pt-3">
+  <%= form_with(model: clock, local: true) do |form| %>
+    <% if clock.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(clock.errors.count, "error") %> prohibited this clock from being saved:</h2>
 
-      <ul>
-        <% clock.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% clock.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :hour %>
+      <%= form.number_field :hour, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :group_id %><br>
+      <%= form.collection_select :group_id, Group.order(:name), :id, :name, {include_blank: true}, {class: "form-control"} %>
+    </div>
+    
+    <div class="actions">
+      <%= form.submit "New/Update", class: "btn button btn-success btn-block" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :hour %>
-    <%= form.number_field :hour %>
-  </div>
-
-  <div class="field">
-    <%= form.label :group_id %>
-    <%= form.number_field :group_id %>
-  </div>
-  
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

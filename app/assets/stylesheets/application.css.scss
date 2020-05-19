@@ -46,12 +46,25 @@ body {
   background-color: #3778c2;
 }
 
+.head-ix-container {
+  height: 95px;
+  background-color: #3778c2;
+}
+
 .content-container {
   height: 100%;
   position: relative;
   background-color: #f1f3f2;
   color: #434b54;
   top: 75px;
+}
+
+.content-ix-container {
+  height: 100%;
+  position: relative;
+  background-color: #f1f3f2;
+  color: #434b54;
+  top: 95px;
 }
 
 .title {
@@ -101,9 +114,17 @@ body {
   font-size: 20px;
 }
 
+.label-size-14 {
+  font-size: 14px;
+}
+
 .border-icon {
   border: 1px solid #fff;
   border-radius: 50%;
   width: 55px;
   height: 55px;
+}
+
+.card-border {
+  box-shadow: 0 0 3px rgb(197, 196, 196);
 }

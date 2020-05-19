@@ -6,6 +6,7 @@ class ClocksController < ApplicationController
   def index
     ids = Group.ids
     @clocks = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: ids)
+    @clocks_sum = @clocks.sum(:hour)
   end
 
   # GET /clocks/1
@@ -65,6 +66,7 @@ class ClocksController < ApplicationController
 
   def ehour
     @ext_hour = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: params[nil])
+    @ext_hour_sum = @ext_hour.sum(:hour)
   end
 
   private

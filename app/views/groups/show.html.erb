@@ -1,16 +1,49 @@
-<% @clocks.each do |clock|%>
-  <%= image_tag(@group.icon, :size => "120x120") %><br>
-  Task name: <%= clock.name %><br>
-  Group name: <%= @group.name %><br>
-  Created by: <%= clock.user.name%><br>
-  <%= clock.created_at.strftime('%d %B %Y')%><br>
-  Hours: <%= clock.hour %>
-  <br><br>
-<% end %>
-<p>
+<div class="container head-ix-container px-0 text-center fixed-top">
+  <div class="h-70 align-items-center justify-content-around d-flex text-white pt-1">
+    <%= link_to 'Back', groups_path, class: "text-white" %>
+    <h2>Project Details</h2>
+    <i class="fas fa-search fa-lg"></i>
+  </div>
+  <div class="row align-items-end d-flex pt-2">
+    <div class="col-4 h-100"></div>
+    <div class="col-4 h-100 text-white">Most Recent</div>  
+    <div class="col-4 h-100 text-info">Most Anciente</div>
+  </div>
+</div>
 
+<div class="container content-ix-container">
+  <div class="d-flex justify-content-between py-3 px-4 mb-2 bg-white card-border">
+    <span>Total Hours</span>
+    <span><%= @group_clocks_sum %> hrs</span>
+  </div>
+
+  <div class="container d-flex flex-column justify-content-around py-1 ">
+    <% @clocks.each do |clock|%>
+      <div class="row d-flex flex-row my-1 p-2 bg-white card-border">
+        <div class="col-3 p-0">
+          <%= image_tag(@group.icon, :size => "100x100") %><br>
+        </div>
+        <div class="col-7">
+          <%= clock.name %><br>
+          <div class="label-size-14">
+            Project: <%= @group.name %><br>
+            Created by: <%= clock.user.name%><br>
+            <%= clock.created_at.strftime('%d %B %Y')%><br>
+          </div>
+        </div>
+        <div class="col-2 d-flex align-items-center">
+          <%= clock.hour %> h
+        </div>
+      </div>
+    <% end %>
+</div>
 
 <% if @group.user == current_user %>
-  <%= link_to 'Edit group', edit_group_path(@group) %> |
+  <div class="fixed-bottom">
+    <div class="p-3 btn-success">
+      <%= link_to 'Edit group', edit_group_path(@group), class: "btn button btn-success border border-white"%><br>
+    </div>
+  </div>
 <% end %>
-<%= link_to 'Back', groups_path %>
+
+

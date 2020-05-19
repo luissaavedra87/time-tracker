@@ -6,8 +6,4 @@ class Clock < ApplicationRecord
 
   scope :order_by_most_recent, -> { order(created_at: :desc) }
 
-  def sum_hours
-    clocks.sum(:hour)
-  end
-
 end
