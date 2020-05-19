@@ -5,7 +5,7 @@ class ClocksController < ApplicationController
   # GET /clocks.json
   def index
     ids = Group.ids
-    @clocks = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: ids)
+    @clocks = Clock.all.order_by_most_recent.where(user_id: current_user, group_id: ids).includes(:user)
     @clocks_sum = @clocks.sum(:hour)
   end
 
