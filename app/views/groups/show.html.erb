@@ -1,11 +1,11 @@
 <div class="container head-ix-container px-0 text-center fixed-top">
   <div class="h-70 align-items-center justify-content-around d-flex text-white pt-1">
-    <%= link_to 'Back', groups_path, class: "text-white" %>
+    <a href="/main"><i class="fas fa-bars fa-lg text-white"></i></a>
     <h2>Project Details</h2>
     <i class="fas fa-search fa-lg"></i>
   </div>
   <div class="row align-items-end d-flex pt-2">
-    <div class="col-4 h-100"></div>
+    <%= link_to 'Back', groups_path, class: "text-white col-4 h-100" %>
     <div class="col-4 h-100 text-white">Most Recent</div>  
     <div class="col-4 h-100 text-info">Most Anciente</div>
   </div>
