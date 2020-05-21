@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "start": "node index.js"
-  },
   "name": "time_tracker",
   "private": true,
   "dependencies": {
