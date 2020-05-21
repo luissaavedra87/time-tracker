@@ -14,23 +14,29 @@
 
 ### Home and main pages
 - For not logged in users
+
 ![Home](app/assets/images/home-page.png)
 
 - Main page after Log in
+
 ![Main](app/assets/images/main-page.png)
 
 ### Account Setting
 - Here you can upload your own profile photo
+
 ![Account](app/assets/images/account-settings.png)
 
 ### Pages
 - Tasks Index
+
 ![Clocks](app/assets/images/clocks-index.png)
 
 - Non Categorised tasks index
+
 ![Clocks](app/assets/images/external-hours.png)
 
 - Projects Index
+
 ![Projects](app/assets/images/projects-index.png)
 
 ## Built With
