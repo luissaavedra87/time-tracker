@@ -24,7 +24,12 @@
           <%= image_tag(clock.group.icon, :size => "100x100") %>
         </div>
         <div class="col-7">
-          <%= clock.name %><br>
+          <div class="font-weight-bold">
+           <%= clock.name %><br>
+          </div>
+          <div class="label-size-14">
+            Project: <%= clock.group.name %>
+          </div>
           <div class="label-size-14">
             <%= clock.created_at.strftime("%d %B %Y") %><br>
           </div>
