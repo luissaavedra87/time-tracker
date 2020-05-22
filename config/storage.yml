@@ -11,7 +11,6 @@ amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-  secret_key_base: <%= Rails.application.credentials.secret_key_base  %>
   region: us-east-2
   bucket: storagecapstone
   
