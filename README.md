@@ -46,7 +46,7 @@
 
 ## Live Demo
 
-[Heroku Demo Link](https://powerful-plateau-48172.herokuapp.com/)
+[Heroku Demo Link](https://fast-woodland-21539.herokuapp.com/)
 
 ## Getting Started
 
