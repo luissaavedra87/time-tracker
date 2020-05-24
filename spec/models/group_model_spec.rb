@@ -28,5 +28,11 @@ RSpec.describe Group, type: :model do
       @group3.save
       expect(@group3.valid?).to eq(false)
     end
+
+    it 'validates missing group icon' do
+      @group3 = Group.new(user_id: 1)
+      @group3.save
+      expect(@group3.valid?).not_to eq(true)
+    end
   end
 end

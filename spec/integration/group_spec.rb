@@ -15,18 +15,26 @@ RSpec.describe 'clock/trasaction views', type: :feature do
   end
 
   scenario 'go to group index' do
-    click_on 'Projects'
-    expect(page).to have_content('Projects')
+    click_on 'Groups'
+    expect(page).to have_content('Groups')
   end
 
   scenario 'create a new group/project' do
     count = Group.all.count
-    click_on 'Projects'
+    click_on 'Groups'
     click_on 'Add Group'
     fill_in 'Name', with: 'test group 2'
     attach_file 'Icon', Rails.root + 'spec/fixtures/default-group.jpg'
     click_on 'New/Edit'
-    expect(page).to have_content('Projects')
+    expect(page).to have_content('Groups')
+    expect(Group.all.count).not_to eq(0)
     expect(Group.all.count).to eq(count + 1)
+  end
+
+  scenario 'destroy a group/project' do
+    click_on 'Groups'
+    expect(page).to have_content('test group')
+    click_on 'Destroy'
+    expect(page).not_to have_content('test group')
   end
 end

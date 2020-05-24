@@ -26,8 +26,26 @@ RSpec.describe 'clock/trasaction views', type: :feature do
     fill_in 'Name', with: 'Step 1 research'
     fill_in 'Hour', with: '3'
     click_on 'New/Update'
-    expect(page).to have_content('Clocks')
+    visit root_path
+    click_on 'Non Categorised Hours'
+    expect(page).to have_content('Step 1 research')
+    expect(Clock.all.count).not_to eq(0)
     expect(Clock.all.count).to eq(count + 1)
+  end
+
+  scenario 'destroy a clock' do
+    count = Clock.all.count
+    click_on 'My Hours'
+    click_on 'Add new'
+    fill_in 'Name', with: 'Step one'
+    fill_in 'Hour', with: '3'
+    click_on 'New/Update'
+    visit root_path
+    click_on 'Non Categorised Hours'
+    expect(page).to have_content('Step one')
+    expect(Clock.all.count).to eq(count + 1)
+    click_on 'Destroy'
+    expect(page).not_to have_content('Step one')
   end
 
   scenario 'go to no-categorised clocks' do
