@@ -1,0 +1,17 @@
+<p>
+  <strong>Group:</strong>
+  <%= @clock.group_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @clock.name %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @clock.hour %>
+</p>
+
+<%= link_to 'Edit', edit_clock_path(@clock) %> |
+<%= link_to 'Back', clocks_path %>

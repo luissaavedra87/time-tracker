@@ -1,0 +1,42 @@
+<div class="container head-ix-container px-0 text-center fixed-top">
+  <div class="h-70 align-items-center justify-content-around d-flex text-white pt-1">
+    <a href="/main"><i class="fas fa-bars fa-lg text-white"></i></a>
+    <h2>Groups</h2>
+    <i class="fas fa-search fa-lg"></i>
+  </div>
+  <div class="row align-items-end d-flex pt-2">
+    <div class="col-4 h-100"></div>
+    <div class="col-4 h-100 text-white">Most Recent</div>  
+    <div class="col-4 h-100 text-info">Most Anciente</div>
+  </div>
+</div>
+
+<div class="container main-container group-ix-top">
+  <div class="container d-flex flex-column justify-content-around py-1 text-secondary">
+    <% @groups.each do |group| %>
+      <div class="row d-flex flex-row my-1 p-2 bg-white card-border">
+        <div class="col-4 p-0">
+          <%= image_tag(group.icon, :size => "120x120") %>
+        </div>
+        <div class="col-7">
+          <%= group.name %><br>
+          <div class="label-size-14">
+            <%= group.created_at.strftime("%d %B %Y") %><br>
+          </div>
+          <div class="label-size-14">
+            <%= link_to 'Show', group %>
+            <% if group.user == current_user %>
+              <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="fixed-bottom">
+  <div class="p-3 btn-success">
+   <%= link_to 'Add Group', new_group_path, class: "btn button btn-success border border-white"%><br>
+  </div>
+</div>

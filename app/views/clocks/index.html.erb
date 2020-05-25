@@ -1,0 +1,55 @@
+<div class="container head-ix-container px-0 text-center fixed-top">
+  <div class="h-70 align-items-center justify-content-around d-flex text-white pt-1">
+    <a href="/main"><i class="fas fa-bars fa-lg text-white"></i></a>
+    <h2>Clocks</h2>
+    <i class="fas fa-search fa-lg"></i>
+  </div>
+  <div class="row align-items-end d-flex pt-2">
+    <div class="col-4 h-100"></div>
+    <div class="col-4 h-100 text-white">Most Recent</div>  
+    <div class="col-4 h-100 text-info">Most Anciente</div>
+  </div>
+</div>
+
+<div class="container content-ix-container">
+  <div class="d-flex justify-content-between py-3 px-4 mb-2 bg-white card-border">
+    <span>Total Hours</span>
+    <span><%= @clocks_sum %> hrs</span>
+  </div>
+
+  <div class="container d-flex flex-column justify-content-around py-1 ">
+    <% @clocks.each do |clock| %>
+      <div class="row d-flex flex-row my-1 p-2 bg-white card-border">
+        <div class="col-3 p-0">
+          <%= image_tag(clock.group.icon, :size => "100x100") %>
+        </div>
+        <div class="col-7">
+          <div class="font-weight-bold">
+           <%= clock.name %><br>
+          </div>
+          <div class="label-size-14">
+            Group: <%= clock.group.name %>
+          </div>
+          <div class="label-size-14">
+            <%= clock.created_at.strftime("%d %B %Y") %><br>
+          </div>
+          <div class="align-self-baseline label-size-14">
+            <%= link_to 'Edit', edit_clock_path(clock) %>
+            <%= link_to 'Destroy', clock, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger" %>
+          </div>
+        </div>
+        <div class="col-2 d-flex align-items-center">
+          <%= clock.hour %> h
+        </div>
+      </div>
+    <% end %>
+  <div>
+
+
+</div>
+
+<div class="fixed-bottom">
+  <div class="p-3 btn-success">
+   <%= link_to 'Add new', new_clock_path, class: "btn button btn-success border border-white"%><br>
+  </div>
+</div>

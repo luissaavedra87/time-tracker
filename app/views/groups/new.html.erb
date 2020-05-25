@@ -1,0 +1,9 @@
+<div class="container head-container px-0 text-center fixed-top">
+  <div class="h-100 align-items-center justify-content-around d-flex text-white">
+    <a href="/main"><i class="fas fa-bars fa-lg text-white"></i></a>
+    <h2>New Group</h2>
+    <%= link_to "Back", groups_path, class:"text-white"%>
+  </div>
+</div>
+
+<%= render 'form', group: @group %>
