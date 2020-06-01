@@ -1,6 +1,6 @@
 # Ruby on Rails Capstone Project: Group our transactions
 
-> This a project from the Microverse course built for mobile screens. The objective is to keep track of the hours you spend on a specific task when working on a project.
+> This is a project was built for mobile screens as part of the Microverse curriculum. The objective is to keep track of the hours you spend on a specific task when working on a project.
 
 ## Features
 - User can Log in with proper authentication(email and password), and have a default user profile image that can be updated in the account settings.
@@ -11,15 +11,6 @@
 - Also you are able to edit and delete all the taks and projects created by you. If you delete a Project all the tasks assigned to that project will be deleted as well.
 
 ## Mobile Views
-
-### Home and main pages
-- For not logged in users
-
-![Home](app/assets/images/home-page.png)
-
-- Main page after Log in
-
-![Main](app/assets/images/main-page.png)
 
 ### Account Setting
 - Here you can upload your own profile photo
@@ -48,6 +39,11 @@
 
 [Heroku Demo Link](https://fast-woodland-21539.herokuapp.com/)
 
+### Log in details
+
+    user: jhon@gmail.com
+    password: 123456
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -59,7 +55,7 @@ Rails: 6.0.3
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
