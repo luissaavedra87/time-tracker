@@ -1,14 +1,14 @@
 # Ruby on Rails Capstone Project: Group our transactions
 
-> This is a project was built for mobile screens as part of the Microverse curriculum. The objective is to keep track of the hours you spend on a specific task when working on a project.
+> This project was built for mobile screens as part of the Microverse curriculum. The objective is to keep track of the hours you spend on a specific task when working on a project.
 
 ## Features
-- User can Log in with proper authentication(email and password), and have a default user profile image that can be updated in the account settings.
-- User can create a task where you enter the hours spent and can be assigned to a Project.
-- When you click on 'My Hours' you can see a list of your tasks assigned to an specific project and the total hours you registered. This list shows only the tasks created by you.
-- When you click on 'Non Categorised hours' you can see a list of tasks not assigned to an specific project when created, and the total hours of those tasks.
-- Inside My Hours and Projects you are able to create a new task or Project with the 'Add new' button
-- Also you are able to edit and delete all the taks and projects created by you. If you delete a Project all the tasks assigned to that project will be deleted as well.
+- Users can Log in with proper authentication(email and password), and have a default user profile image that can be updated in the account settings.
+- Users can create a task where you enter the hours spent and can be assigned to a Project.
+- When you click on 'My Hours' you can see a list of your tasks assigned to a specific project and the total hours you registered. This list shows only the tasks created by you.
+- When you click on 'Non Categorised hours' you can see a list of tasks not assigned to a specific project when created and the total hours of those tasks.
+- Inside My Hours and Projects, you can create a new task or Project with the 'Add new' button.
+- Also, you can edit and delete all the tasks and projects created by you. If you delete a Project all the tasks assigned to that project will be deleted as well.
 
 ## Mobile Views
 
