@@ -47,8 +47,8 @@
 ### Live demo usage
 
 - Go to Project link and click "Add Group".
-- Go to Clock link and create a new task, insert the hours spent and assign it to a project.
-- Then you can check all your projects and created tasks in their respectives link.
+- Go to Clock link and create a new task, insert the hours spent, and assign it to a project.
+- Then you can check all your projects and create tasks in their respective link.
 
 ## Getting Started
 
@@ -93,7 +93,7 @@ Open `http://localhost:3000/` in your browser.
 ## Future Features
 
 - Create private projects where a user can invite friends.
-- Friends are able to accept or decline invitations to collaborate in projects.
+- Friends can accept or decline invitations to collaborate in projects.
 
 ## Author
 
