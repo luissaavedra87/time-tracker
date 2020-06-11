@@ -10,11 +10,6 @@
 - Inside My Hours and Projects you are able to create a new task or Project with the 'Add new' button
 - Also you are able to edit and delete all the taks and projects created by you. If you delete a Project all the tasks assigned to that project will be deleted as well.
 
-## Future Features
-
-- Create private projects where a user can invite friends.
-- Friends are able to accept or decline invitations to collaborate in projects.
-
 ## Mobile Views
 
 ### Account Setting
@@ -94,6 +89,11 @@ Open `http://localhost:3000/` in your browser.
 ```
     rpsec --format documentation
 ```
+
+## Future Features
+
+- Create private projects where a user can invite friends.
+- Friends are able to accept or decline invitations to collaborate in projects.
 
 ## Author
 
