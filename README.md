@@ -49,6 +49,12 @@
     user: jhon@gmail.com
     password: 123456
 
+### Live demo usage
+
+- Go to Project link and click "Add Group".
+- Go to Clock link and create a new task, insert the hours spent and assign it to a project.
+- Then you can check all your projects and created tasks in their respectives link.
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -73,7 +79,7 @@ Setup database with:
    rails db:migrate
 ```
 
-### Usage
+### Usage after download or clone repository
 
 Start server with:
 
