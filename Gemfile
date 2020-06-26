@@ -68,3 +68,4 @@ gem 'devise', '~> 4.7'
 gem 'jquery-rails'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem "activestorage", ">= 5.2.4.3"
+gem "actionpack", ">= 6.0.3.2"
